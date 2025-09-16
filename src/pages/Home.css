@@ -1,0 +1,240 @@
+/* Main container styles */
+.home-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0e7ff 100%);
+  padding: 2rem;
+}
+
+.home-content {
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+/* Header styles */
+.home-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.home-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.home-subtitle {
+  font-size: 1.25rem;
+  color: #6b7280;
+  max-width: 32rem;
+  margin: 0 auto;
+}
+
+/* Algorithm grid styles */
+.algorithm-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+@media (min-width: 768px) {
+  .algorithm-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .algorithm-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Algorithm card styles */
+.algorithm-card {
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.algorithm-card:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  transform: scale(1.05);
+}
+
+.algorithm-card.selected {
+  /* ring: 4px;
+  ring-color: #3b82f6; */
+  background: #eff6ff;
+}
+
+.algorithm-card:not(.selected):hover {
+  background: #f9fafb;
+}
+
+.algorithm-card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.algorithm-card-icon {
+  padding: 0.75rem;
+  border-radius: 9999px;
+  margin-right: 1rem;
+}
+
+.algorithm-card-icon.default {
+  background: #f3f4f6;
+  color: #6b7280;
+}
+
+.algorithm-card-icon.selected {
+  background: #3b82f6;
+  color: white;
+}
+
+.algorithm-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.algorithm-card-description {
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Configuration panel styles */
+.config-panel {
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  margin-bottom: 20px;
+}
+
+.config-header {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #111827;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.config-icon {
+  padding: 0.5rem;
+  background: #3b82f6;
+  color: white;
+  border-radius: 9999px;
+  margin-right: 1rem;
+}
+
+/* Parameter input styles */
+.param-container {
+  margin-bottom: 1.5rem;
+  max-width: 95%;
+  align-self: center;
+}
+
+.param-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.param-required {
+  color: #ef4444;
+}
+
+.param-input, .param-select, .param-textarea {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.param-input:focus,
+.param-select:focus,
+.param-textarea:focus {
+  outline: none;
+  /* ring: 2px;
+  ring-color: #3b82f6; */
+  border-color: transparent;
+}
+
+.param-textarea {
+  resize: none;
+  font-family: inherit;
+}
+
+/* Visualize button styles */
+.visualize-button {
+  width: 100%;
+  background: linear-gradient(90deg, #3b82f6 0%, #4f46e5 100%);
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+}
+
+.visualize-button:hover {
+  background: linear-gradient(90deg, #2563eb 0%, #4338ca 100%);
+  transform: scale(1.05);
+}
+
+/* Empty state styles */
+.empty-state {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.empty-state-icon {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto 1rem;
+  color: #9ca3af;
+}
+
+.empty-state-text {
+  font-size: 1.25rem;
+  color: #6b7280;
+}
+
+/* Responsive styles */
+@media (max-width: 640px) {
+  .home-container {
+    padding: 1rem;
+  }
+  
+  .home-title {
+    font-size: 2rem;
+  }
+  
+  .home-subtitle {
+    font-size: 1rem;
+  }
+  
+  .algorithm-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .config-panel {
+    padding: 1.5rem;
+  }
+  
+}

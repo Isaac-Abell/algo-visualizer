@@ -1,0 +1,37 @@
+.bfs-legend {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 0.75rem;
+  border: 1px solid #e2e8f0;
+}
+
+.bfs-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+.bfs-legend-color {
+  width: 20px;
+  height: 20px;
+  border-radius: 0.25rem;
+  border: 1px solid #d1d5db;
+}
+
+.bfs-legend-color.bfs-current-mid {
+  background: #3b82f6;
+}
+
+.bfs-legend-color.bfs-boundary {
+  background: #f59e0b;
+}
+
+.bfs-legend-color.bfs-active-range {
+  background: #22c55e;
+}
