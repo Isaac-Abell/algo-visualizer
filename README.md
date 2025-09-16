@@ -101,9 +101,3 @@ src/
 ├─ App.tsx
 ├─ index.tsx
 ```
-
----
-
-## License
-
-MIT License \[Isaac Abell]
