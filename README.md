@@ -1,69 +1,109 @@
-# React + TypeScript + Vite
+# Algorithm Visualizer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive web-based visualization tool for understanding classic algorithms including **BFS, DFS, Quicksort, Heapsort, and Binary Search**. Perfect for students, educators, or anyone looking to grasp how these algorithms work step by step.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+* **DFS (Depth-First Search)**
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+  * Step through DFS traversal on any graph.
+  * See the stack of nodes, current node, visited nodes, and active edges.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+* **BFS (Breadth-First Search)**
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+  * Step through BFS traversal.
+  * Visualize the queue of nodes to visit, current node, and completed nodes.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+* **Quicksort**
+
+  * Visualize the recursive partitioning process.
+  * Track pivot selection, left/right partitions, and element swaps.
+
+* **Heapsort**
+
+  * Visualize heap construction and sorting process.
+  * See the heap as it’s built and elements being extracted to sort the array.
+
+* **Binary Search**
+
+  * Visualize searching in a sorted array.
+  * Track the current search range, middle element, eliminated elements, and found element.
+
+---
+
+## Live Demo
+
+*(If you host it somewhere, link here, e.g., GitHub Pages)*
+
+---
+
+## Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/Isaac-Abell/algo-visualizer.git
+   cd algorithm-visualizer
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Run the development server:
+
+   ```bash
+   npm start
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+---
+
+## Usage
+
+* Select the algorithm from the sidebar or menu.
+* For graph algorithms (BFS/DFS):
+
+  * Enter a graph (adjacency list or predefined example).
+  * Choose the starting node.
+  * Use **Step Forward**, **Step Back**, or **Play** to navigate.
+* For sorting/searching algorithms:
+
+  * Enter an array or use the default example.
+  * Watch the algorithm run step by step with clear color coding.
+
+---
+
+## Tech Stack
+
+* **React** + **TypeScript**
+* **Framer Motion** for animations
+* **CSS Modules** for styling
+* Custom algorithms implemented in TypeScript
+
+---
+
+## Project Structure
+
+```
+src/
+│
+├─ algorithms/      # BFS, DFS, Quicksort, Heapsort, Binary Search
+├─ components/      # Visualizers and Graph/Array components
+├─ pages/           # Different pages (currently only has home)
+├─ types/           # TypeScript type definitions
+├─ utils/           # Utility functions for nodes, edges calculations
+├─ App.tsx
+├─ index.tsx
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## License
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+MIT License \[Isaac Abell]
