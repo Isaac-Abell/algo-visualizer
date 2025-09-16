@@ -35,7 +35,7 @@ An interactive web-based visualization tool for understanding classic algorithms
 
 ## Live Demo
 
-*(If you host it somewhere, link here, e.g., GitHub Pages)*
+[link](https://isaacabell.com/algo-visualizer/)
 
 ---
 
