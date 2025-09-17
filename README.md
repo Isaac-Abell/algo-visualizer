@@ -59,9 +59,6 @@ An interactive web-based visualization tool for understanding classic algorithms
    ```bash
    npm start
    ```
-
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
-
 ---
 
 ## Usage
