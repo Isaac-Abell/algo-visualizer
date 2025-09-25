@@ -95,6 +95,7 @@ src/
 │
 ├─ algorithms/      # BFS, DFS, Quicksort, Heapsort, Binary Search
 ├─ components/      # Visualizers and Graph/Array components
+├─ hooks/           # Custom React hooks for state management and animation
 ├─ pages/           # Different pages (currently only has home)
 ├─ types/           # TypeScript type definitions
 ├─ utils/           # Utility functions for nodes, edges calculations

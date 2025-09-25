@@ -1,7 +1,10 @@
-import { ParameterInput } from './ParameterInput';
-import type { Algorithm, ProcessedParams } from './Algorithms';
+import { ParameterInput } from '../ParameterInput/ParameterInput';
+import type { ProcessedParams } from '../../types/algorithmsProps';
+import type { Algorithm } from '../../types/algorithmsProps';
 
-interface ConfigPanelProps {
+import './ConfigPanel.css';
+
+export interface ConfigPanelProps {
     algorithm: Algorithm;
     params: Record<string, string | number>;
     onParamChange: (paramName: string, value: string) => void;
@@ -11,6 +14,7 @@ interface ConfigPanelProps {
 export function ConfigPanel({ algorithm, params, onParamChange, onVisualize }: ConfigPanelProps) {
     const handleVisualize = (): void => {
         // Validate required parameters
+
         const missingParams = algorithm.params.filter(param =>
             param.required && (!params[param.name] || params[param.name].toString().trim() === '')
         );

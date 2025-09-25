@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { quickSortWithSteps } from "../../algorithms/QuickSort";
-import type { QuickSortStep } from "../../algorithms/QuickSort";
-import { Controls } from '../Controls/Controls';
 import "./QuickSortVisualizer.css";
+import { type QuickSortStep, quickSortWithSteps } from "../../../algorithms/QuickSort";
+import { Controls } from "../../Controls/Controls";
 
 interface QuickSortVisualizerProps {
     array: number[];

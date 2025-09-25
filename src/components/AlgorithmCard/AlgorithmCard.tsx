@@ -1,6 +1,7 @@
-import type { Algorithm } from './Algorithms';
+import type { Algorithm } from '../../types/algorithmsProps';
+import './AlgorithmCard.css';
 
-interface AlgorithmCardProps {
+export interface AlgorithmCardProps {
   algorithm: Algorithm;
   isSelected: boolean;
   onSelect: (algorithmId: string) => void;

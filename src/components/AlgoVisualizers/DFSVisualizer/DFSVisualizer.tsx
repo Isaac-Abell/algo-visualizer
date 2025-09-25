@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from "react";
-import type { GraphVisualizerProps, GraphNode, VisualStep } from "../../types/graphTypes";
-import { generateBFSSteps } from "../../algorithms/BFS";
-import { calculateNodePositions } from "../../utils/graphUtils";
-import { Graph } from "../Graph/Graph";
-import { Controls } from "../Controls/Controls";
-import "./bfsVisualizer.css";
+import type { GraphVisualizerProps, GraphNode, VisualStep } from "../../../types/graphTypes";
+import { generateDFSSteps } from "../../../algorithms/DFS";
+import { calculateNodePositions } from "../../../utils/graphUtils";
+import { Graph } from "../../Graph/Graph";
+import { Controls } from "../../Controls/Controls";
+import "./DFSVisualizer.css";
 
-export const BFSVisualizer: React.FC<GraphVisualizerProps> = ({ adjacencyList, start }) => {
+export const DFSVisualizer: React.FC<GraphVisualizerProps> = ({
+  adjacencyList,
+  start
+}) => {
   const [steps, setSteps] = useState<VisualStep[]>([]);
   const [currentStep, setCurrentStep] = useState<number>(-1);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -14,8 +17,9 @@ export const BFSVisualizer: React.FC<GraphVisualizerProps> = ({ adjacencyList, s
   const [isAnimating, setIsAnimating] = useState(false);
   const [nodePositions, setNodePositions] = useState<{ [key: string]: GraphNode }>({});
 
+  // Generate DFS steps
   useEffect(() => {
-    const generatedSteps = generateBFSSteps(adjacencyList, start);
+    const generatedSteps = generateDFSSteps(adjacencyList, start);
     setSteps(generatedSteps);
     setCurrentStep(-1);
     setIsPlaying(false);
@@ -23,6 +27,7 @@ export const BFSVisualizer: React.FC<GraphVisualizerProps> = ({ adjacencyList, s
     setNodePositions(calculateNodePositions(adjacencyList));
   }, [adjacencyList, start]);
 
+  // Auto-play functionality
   useEffect(() => {
     if (!isPlaying || currentStep >= steps.length - 1 || isAnimating) return;
     const id = setTimeout(() => handleStepForward(), speed);
@@ -48,8 +53,8 @@ export const BFSVisualizer: React.FC<GraphVisualizerProps> = ({ adjacencyList, s
   const currentStepData = currentStep >= 0 ? steps[currentStep] : null;
 
   return (
-    <div className="bfs-visualizer">
-      <h2 className="bfs-title">BFS (Breadth-First Search) Visualizer</h2>
+    <div className="dfs-visualizer">
+      <h2 className="dfs-title">DFS (Depth-First Search) Visualizer</h2>
 
       <Controls
         isPlaying={isPlaying}
@@ -64,22 +69,27 @@ export const BFSVisualizer: React.FC<GraphVisualizerProps> = ({ adjacencyList, s
         isAnimating={isAnimating}
       />
 
-      <Graph adjacencyList={adjacencyList} step={currentStepData} nodePositions={nodePositions} />
+      <Graph
+        adjacencyList={adjacencyList}
+        step={currentStepData}
+        nodePositions={nodePositions}
+      />
 
-      <div className="bfs-legend">
-        <div className="bfs-legend-item">
-          <div className="bfs-legend-color bfs-current-mid"></div>
+      <div className="dfs-legend">
+        <div className="dfs-legend-item">
+          <div className="dfs-legend-color dfs-current-mid"></div>
           <span>Current Node</span>
         </div>
-        <div className="bfs-legend-item">
-          <div className="bfs-legend-color bfs-boundary"></div>
+        <div className="dfs-legend-item">
+          <div className="dfs-legend-color dfs-boundary"></div>
           <span>Pending Node</span>
         </div>
-        <div className="bfs-legend-item">
-          <div className="bfs-legend-color bfs-active-range"></div>
+        <div className="dfs-legend-item">
+          <div className="dfs-legend-color dfs-active-range"></div>
           <span>Completed Node</span>
         </div>
       </div>
+
     </div>
   );
 };

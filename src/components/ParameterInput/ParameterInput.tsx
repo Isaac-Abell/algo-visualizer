@@ -1,11 +1,13 @@
 import React from 'react';
-import type { AlgorithmParam } from './Algorithms';
+import './ParameterInput.css';
+import type { AlgorithmParam } from '../../types/algorithmsProps';
 
-interface ParameterInputProps {
+export interface ParameterInputProps {
   param: AlgorithmParam;
   value: string | number | undefined;
   onChange: (paramName: string, value: string) => void;
 }
+
 
 export function ParameterInput({ param, value, onChange }: ParameterInputProps) {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {

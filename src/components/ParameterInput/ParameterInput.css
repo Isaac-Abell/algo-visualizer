@@ -1,0 +1,39 @@
+/* Parameter input styles */
+.param-container {
+  margin-bottom: 1.5rem;
+  max-width: 95%;
+  align-self: center;
+}
+
+.param-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.param-required {
+  color: #ef4444;
+}
+
+.param-input, .param-select, .param-textarea {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.param-input:focus,
+.param-select:focus,
+.param-textarea:focus {
+  outline: none;
+  border-color: transparent;
+}
+
+.param-textarea {
+  resize: none;
+  font-family: inherit;
+}

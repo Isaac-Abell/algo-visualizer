@@ -1,4 +1,5 @@
 import { Search } from 'lucide-react';
+import './EmptyState.css';
 
 export function EmptyState() {
   return (

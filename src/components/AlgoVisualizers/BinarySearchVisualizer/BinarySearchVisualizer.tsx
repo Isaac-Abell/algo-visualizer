@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
-import { binarySearch } from '../../algorithms/BinarySearch';
-import type { BinarySearchStep } from '../../algorithms/BinarySearch';
-import { Controls } from '../Controls/Controls';
 import './BinarySearchVisualizer.css';
+import { binarySearch } from '../../../algorithms/BinarySearch';
+import type { BinarySearchStep } from '../../../algorithms/BinarySearch';
+import { Controls } from '../../Controls/Controls';
 
 interface BinarySearchVisualizerProps {
     array: number[];

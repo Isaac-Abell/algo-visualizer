@@ -1,0 +1,45 @@
+/* Configuration panel styles */
+.config-panel {
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  margin-bottom: 20px;
+}
+
+.config-header {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #111827;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.config-icon {
+  padding: 0.5rem;
+  background: #3b82f6;
+  color: white;
+  border-radius: 9999px;
+  margin-right: 1rem;
+}
+
+/* Visualize button styles */
+.visualize-button {
+  width: 100%;
+  background: linear-gradient(90deg, #3b82f6 0%, #4f46e5 100%);
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+}
+
+.visualize-button:hover {
+  background: linear-gradient(90deg, #2563eb 0%, #4338ca 100%);
+  transform: scale(1.05);
+}

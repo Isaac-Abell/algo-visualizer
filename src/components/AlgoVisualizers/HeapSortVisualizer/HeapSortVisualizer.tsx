@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { heapSort } from "../../algorithms/HeapSort";
-import { Controls } from '../Controls/Controls';
 import "./HeapSortVisualizer.css";
-import { HeapTree } from "../HeapTree/HeapTree";
+import { heapSort } from "../../../algorithms/HeapSort";
+import { Controls } from "../../Controls/Controls";
+import { HeapTree } from "../../HeapTree/HeapTree";
 
 interface VisualStep {
     array: number[];

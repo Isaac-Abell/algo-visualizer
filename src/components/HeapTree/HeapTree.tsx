@@ -1,19 +1,15 @@
 import { motion } from "framer-motion";
 
-interface TreePosition {
-    x: number;
-    y: number;
-}
-
-interface HeapTreeProps {
+export interface HeapTreeProps {
     array: number[];
     heapSize: number;
     highlightedIndices: number[];
-    treePositions: TreePosition[];
-    stepAction?: "highlight" | "swap" | "heapify" | "sorted";
-    swapFrom?: number;
-    swapTo?: number;
+    treePositions: { x: number; y: number }[];
+    stepAction: "compare" | "swap" | "none" | "sorted";
+    swapFrom: number | null;
+    swapTo: number | null;
 }
+
 
 export const HeapTree: React.FC<HeapTreeProps> = ({
     array,

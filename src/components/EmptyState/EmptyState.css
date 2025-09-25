@@ -1,0 +1,17 @@
+/* Empty state styles */
+.empty-state {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.empty-state-icon {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto 1rem;
+  color: #9ca3af;
+}
+
+.empty-state-text {
+  font-size: 1.25rem;
+  color: #6b7280;
+}

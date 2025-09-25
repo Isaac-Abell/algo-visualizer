@@ -1,0 +1,33 @@
+/* Workspace container */
+.algorithm-workspace {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* spacing between config panel and visualization */
+  margin-bottom: 3rem; /* similar spacing as .algorithm-grid */
+}
+
+/* Visualization container */
+.visualization-container {
+  width: 100%;
+  background: #ffffff; /* optional: give a clean background */
+  padding: 1.5rem;
+  border-radius: 1rem; /* rounded corners for a soft UI */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px; /* reasonable default height */
+  overflow-x: auto; /* allow horizontal scroll if content overflows */
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .algorithm-workspace {
+    gap: 1rem;
+  }
+
+  .visualization-container {
+    padding: 1rem;
+    min-height: 200px;
+  }
+}
