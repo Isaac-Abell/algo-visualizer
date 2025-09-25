@@ -5,9 +5,9 @@ export interface HeapTreeProps {
     heapSize: number;
     highlightedIndices: number[];
     treePositions: { x: number; y: number }[];
-    stepAction: "compare" | "swap" | "none" | "sorted";
-    swapFrom: number | null;
-    swapTo: number | null;
+    stepAction: "swap" | "sorted" | "heapify" | "highlight" | undefined;
+    swapFrom: number | undefined;
+    swapTo: number | undefined;
 }
 
 
